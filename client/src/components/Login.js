@@ -7,11 +7,14 @@ export default function Login({ onIdSubmit }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+
     onIdSubmit(idRef.current.value);
   }
+
   function createNewId() {
     onIdSubmit(uuidV4());
   }
+
   return (
     <Container
       className="align-items-center d-flex"
