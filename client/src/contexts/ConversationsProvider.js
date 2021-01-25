@@ -35,6 +35,7 @@ export function ConversationsProvider({ children }) {
   });
   const value = {
     conversations: formattedConversation,
+    selectedConversation: formattedConversation[selectConversationIndex],
     selectConversationIndex: setSelectConversationIndex,
     createConversation,
   };
