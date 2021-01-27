@@ -26,7 +26,7 @@ export function ConversationsProvider({ children, id }) {
     setConversations((prevConversations) => {
       let madeChange = false;
       const newMessage = { sender, text };
-      console.log("newMessage" + newMessage);
+
       const newConversation = prevConversations.map((conversation) => {
         if (arrayEquality(conversation.recipients, recipients)) {
           madeChange = true;
@@ -47,7 +47,6 @@ export function ConversationsProvider({ children, id }) {
   }
 
   function sendMessage(recipients, text) {
-    console.log("in send message" + recipients);
     addMessageToConversation({ recipients, text, sender: id });
   }
 
