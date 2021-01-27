@@ -12,12 +12,11 @@ function OpenConversation() {
   }, []);
 
   const { sendMessage, selectedConversation } = useConversations();
-
+  console.log(selectedConversation);
   function handleSubmit(e) {
-    console.log(selectedConversation);
     e.preventDefault();
     sendMessage(
-      selectedConversation.recipients.map((recipient) => (r) => r.id),
+      selectedConversation.recipients.map((r) => r.id),
       text
     );
     setText("");
